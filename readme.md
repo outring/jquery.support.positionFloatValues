@@ -4,7 +4,9 @@ Support check for float values in CSS positioning properties
 Some browsers don't have support for float values in positioning properties (top, right, bottom, left), but getBoundingClientRect/jQuery.offset in these browsers could return float values.
 If you want to use coords from getBoundingClientRects to set css positions, you have to round them according to browser's float values support.
 
-Example:
+Example
+=======
+
     var placeholderOffset = $('#Placeholder').offset();
     $('#Popup').css({ top: placeholderOffset.top, left: placeholderOffset.left }); //Could be not pixel-perfect somewhere
     //Rounding
